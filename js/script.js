@@ -21,7 +21,7 @@ function trocaSkin(){
     for(i = 0; i < skin.imagem.length; i++){
         var zindex = 5 - i
     
-    $(".skins").append(`<div id="${i}" class='skin skin-esquerda' style="z-index: ${zindex}"><img src='../img/${skin.imagem[i]}'></div>`);
+    $(".skins").append(`<div id="${i}" class='skin skin-esquerda' style="z-index: ${zindex}"><img src='./img/${skin.imagem[i]}'></div>`);
     $("#0").addClass('skin-principal');
     
     
@@ -46,7 +46,7 @@ function trocaSkin(){
     $('.skin').click(function (){ 
 
         var id = $(this).attr("id");
-        $('#fundo').css('background-image', `url('../img/${skin.fundo[id]}')`)
+        $('#fundo').css('background-image', `url('./img/${skin.fundo[id]}')`)
         $('.some-texto').remove()
         $(".skin-principal").prepend(`<h1 class="texto-skin some-texto">${skin.texto[id]}</h1>`);   
   
